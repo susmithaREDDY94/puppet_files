@@ -1,9 +1,3 @@
-class apache{
-
-docker::image { 'ubuntu':
-   image_tag => 'trusty',
-}
-
-docker::run { 'helloworld':
-  image   => 'ubuntu',
+class { 'docker':
+  use_upstream_package_source => false,
 }
