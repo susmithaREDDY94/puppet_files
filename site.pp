@@ -1,8 +1,11 @@
 node default{
 
-include docker;
-include java;
 exec{'conditionals':
-
+case service{
+'apache2':{ 
+  include docker },
+'nginx':{ 
+  include java }
+}
 
 }
